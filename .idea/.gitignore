@@ -5,3 +5,5 @@
 /httpRequests/
 # 编辑器相关
 笔记/
+# 测试文件
+../demo.js
