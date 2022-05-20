@@ -1,0 +1,1 @@
+export const myCity = "南昌"

@@ -1,0 +1,64 @@
+{
+    /* 
+        include 包含哪些目录:  /** 表示该目录下的所以目录  /* 表示该目录下的所有文件
+        include 的默认值就是 ["\/**\/*"] 
+    */
+    "include": [
+        "./src/**/*" // 等价于 ./src
+    ],
+    /* 
+        exclude 排除哪些目录   默认值：["node_modules", "bower_components", "jspm_packages"]
+    */
+    "exclude": [],
+    "files": [
+        "./src/01_basic.ts"
+    ], // 指定被编译的文件列表，只在文件少的时候才会用
+    "compilerOptions": {
+        "target": "ES6", // 编译成 JS 的版本，默认是 ES3
+        "module": "ES6", // 模块化的类型,可选项"CommonJS", "AMD", "System"...
+        "outDir": "./dist", // 输出目录
+        /* 
+            outFile：输出的文件，会将所有的 ts 文件合并为一个 js 文件，但是只有 module 配置为 AMD 或 System 才可以
+         */
+        // "outFile": "./dist/app.js"
+        // "lib": [] // 指定代码运行时所包含的库（宿主环境）(★★★★★ 默认是浏览器运行环境)
+        "rootDir": "./src", // 指定代码的根目录
+        /* 
+            allowJs: 是否对 JS 进行编译，默认是 false
+            checkJs: 是否对 JS 文件进行语法检查，默认是 false，但是只有 allowJS 也为 true ，checkJS 才能为 true
+        */
+        "allowJs": true,
+        "checkJs": true,
+        "removeComments": false, // 是否移除注释
+        "noEmit": false, // 不对代码进行编译(即不编译生成文件，有时可以只是用来进行类型检查)
+        "sourceMap": false, // 是否生成 sourceMap
+        /* 
+            strict: 开启所有的严格检查，默认为 true
+            alwaysStrict: 总是以严格模式对代码进行编译
+            noImplicitAny：禁止隐式的any类型（例如函数中的形参）
+            noImplicitThis: 禁止类型不明确的this
+            strictBindCallApply：严格检查bind、call和apply的参数列表
+            strictFunctionTypes：严格检查函数的类型
+            strictNullChecks：严格的空值检查
+            strictPropertyInitialization：严格检查属性是否初始化
+        */
+        "strict": true,
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        /* 
+            （额外检查）
+            noFallthroughCasesInSwitch：检查switch语句包含正确的break
+            noImplicitReturns：检查函数没有隐式的返回值
+            noUnusedLocals：检查未使用的局部变量
+            noUnusedParameters：检查未使用的参数
+        */
+        /* 
+            allowUnreachableCode：检查不可达代码
+                                true，忽略不可达代码
+                                false，不可达代码将引起错误
+            noEmitOnError：有错误的情况下不进行编译，默认值：false
+        */
+        "noEmitOnError": true
+    },
+}

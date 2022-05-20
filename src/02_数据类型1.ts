@@ -25,7 +25,7 @@ msg = "hi";
 msg = false;
 
 let str: string;
-str = msg;              // ★★★★★str 被声明为 string 类型，但是 msg 为 any 类型，导致 str 的类型检查也被关闭了（类型不安全）
+// str = msg;              // ★★★★★str 被声明为 string 类型，但是 msg 为 any 类型，导致 str 的类型检查也被关闭了（类型不安全）
 
 let msg2: unknown;
 msg2 = 13;
@@ -45,7 +45,7 @@ str = msg2 as string;
 // 4. void（没有任何类型，在某种程度上可以看作与 any 相反的类型） | never（不能是任何类型）   ★★★★★ 这两个数据类型一般用在函数上
 let data: void;   // 声明一个void类型的变量没有什么大用，因为你只能为它赋予 undefined 和 null
 data = undefined;
-data = null;
+// data = null; (但是在配置文件里开启了严格类型检查时只能赋 undefined)
 function myFun(): void {      // void 声明函数没有返回值
     console.log("hello ts");
     // return undefined;
