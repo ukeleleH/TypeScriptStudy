@@ -1,7 +1,7 @@
 // 1. 基本数据类型： string  number  boolean
-let a: string = "hello";
-let b: number = 100;
-let c: boolean = true;
+let q: string = "hello";
+let w: number = 100;
+let e: boolean = true;
 
 // 2. 字面量类型 
 let myName: "zhangsan";
