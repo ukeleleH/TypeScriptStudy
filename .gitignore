@@ -1,3 +1,5 @@
 test.js
 # 编辑器相关
 /.idea
+# 第三方库
+node_modules
