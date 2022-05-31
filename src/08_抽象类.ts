@@ -30,9 +30,12 @@
         constructor(price: number) {
             this.price = price
         }
+        // 抽象类中可以有实际的方法
         say() {
             console.log(`我的价格是${this.price}`)
         }
+        // 也可以有抽象方法（只有方法声明，没有方法体的方法）(子类继承抽象类的时候必须实现抽象方法）★★★★★
+        abstract sale(): void;
     }
 
     // const product1 = new Product(1000)  // ★★★★★ 抽象类无法创建实例
@@ -50,8 +53,13 @@
         say() {
             console.log(`我是${this.name}手机，我的价格是${this.price}`)
         }
+        // 必须实现父类的抽象方法
+        sale(): void {
+            console.log("非卖品")
+        }
     }
 
     const xiaomi = new Phone("小米", 2000)
     xiaomi.say()
+    xiaomi.sale()
 }())
