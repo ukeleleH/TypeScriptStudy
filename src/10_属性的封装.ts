@@ -47,7 +47,7 @@
             this._name = value  // private 属性只能在内部修改它的值
         }
 
-        // getter 方法的另一种写法(ES2015 也有这种类似的 getter 、setter)（这种写法叫做访问器）
+        // getter 方法的另一种写法(ES2015 也有这种类似的 getter 、setter)（这种写法叫做存取器）
         // 可以简化访问  （ 对象.price 就能访问 ）（ 不必 对象.price() )
         get price() {
             return this._price;
