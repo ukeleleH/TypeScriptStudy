@@ -15,7 +15,8 @@ module.exports = {
         filename: "bundle.js",
         path: path.resolve(__dirname, "./dist"),
         environment: {
-            arrowFunction: false // 关闭 webpack 的箭头函数，可选(如果要支持 IE 浏览器，就要配置这个，因为 IE 是不支持箭头函数， babel-loader 也不能转换 webpack 自生成的箭头函数)
+            arrowFunction: false, // 关闭 webpack 的箭头函数，可选(如果要支持 IE 浏览器，就要配置这个，因为 IE 是不支持箭头函数， babel-loader 也不能转换 webpack 自生成的箭头函数)
+            const: false // 如果要兼容 IE 10, 则同时需要关闭 webpack 自生成的 const 关键字
         }
     },
 
