@@ -9,6 +9,7 @@
     height: 600px;
     margin: 20px auto;
     border: 3px solid;
+    background-color: #b7d4a8;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -16,18 +17,21 @@
     align-items: center;
 
     #box {
-        width: 470px;
-        height: 470px;
+        width: 474px;
+        height: 474px;
         border: 2px solid;
         position: relative;
 
         #snake {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 10px;
-            height: 10px;
-            background-color: #bfc;
+            position: relative;
+
+            &>div {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border: 1px solid #b7d4a8;
+                background-color: #000;
+            }
         }
 
         #food {
@@ -44,7 +48,7 @@
             div {
                 width: 4px;
                 height: 4px;
-                background-color: #ccc;
+                background-color: #ff9901;
                 transform: rotate(45deg);
             }
         }
